@@ -29,7 +29,7 @@ class ImageSlideCreator {
         this.imageSlide = document.createElement("div");
         this.imageSlide.className = "carousel-item slide";
         this.imageSlide.setAttribute("data-interval", "5000");
-        this.imageSlide.setAttribute("style", "background-color: #190f27;");
+        this.imageSlide.setAttribute("style", "background-color: rgb(0,35,96);");
         this.carousel.append(this.imageSlide);
     }
 

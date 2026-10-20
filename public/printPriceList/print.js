@@ -29,16 +29,19 @@ function getData(dataColumns){
                     var textNode = document.createTextNode(filteredList[i][0]);
                     product.appendChild(textNode);
                     node.appendChild(product);
+
                     // Create a table data(price) on table row(node) with price
                     var price = document.createElement("TD");
                     var textNode = document.createTextNode(filteredList[i][1]);
                     price.appendChild(textNode);
                     node.appendChild(price);
+
                     // Create a header on table row with product for the right column
                     var product = document.createElement("TH");
                     var textNode = document.createTextNode(filteredList[i+(filteredList.length-1)/2][0]);
                     product.appendChild(textNode);
                     node.appendChild(product);
+                    
                     // Create a table data on table row with price for the right column
                     var price = document.createElement("TD");
                     var textNode = document.createTextNode(filteredList[i+(filteredList.length-1)/2][1]);
