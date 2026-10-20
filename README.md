@@ -30,7 +30,7 @@ There are automated tests made with Selenium that use test data.
 
 [To run tests](documentation/tests.md)
 
-## Getting started with the Raspberry Pi
+## Getting started with the raspberry Pi
 [Instructions](documentation/raspberrySetup.md)
 
 [Using Raspberry pi](documentation/usingRaspberryPi.md)
