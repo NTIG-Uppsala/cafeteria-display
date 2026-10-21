@@ -36,7 +36,6 @@ class ImageSlideCreator {
     addBackground() {
         const backgroundElement = document.createElement("img");
         backgroundElement.className = "productSlide dot";
-        backgroundElement.setAttribute("src", "images/blurredDot.png");
         this.imageSlide.append(backgroundElement);
     }
 
@@ -51,7 +50,7 @@ class ImageSlideCreator {
     addProductInfo(name, price) {
         const infoBackground = document.createElement("img")
         infoBackground.className = "productSlide productInfoBackground";
-        infoBackground.setAttribute("src", "images/vibrantDot.png")
+        infoBackground.setAttribute("src", "images/vibrant_dot-removebg-preview.png")
 
         const infoContainer = document.createElement("div");
         infoContainer.className = "carousel-caption d-none d-md-block productPrice";
