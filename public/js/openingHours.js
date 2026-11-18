@@ -4,8 +4,10 @@ function tempClose(reason) {
     let header = document.getElementById("openHoursHead");
     const openingHours = document.getElementById("openHours");
     openingHours.remove();
-    header.style.fontSize = 90 + "px";
+    header.style.fontSize = 85 + "px";
+    header.style.right = 0 + "%";
     header.innerText = "Cafeterian har tillfälligt stängt";
+    header.style.top = 3 + "%";
     // This adds a message with the reason for the closing 
     const reasoning = document.createElement("p");
     reasoning.className = "openHours";
@@ -13,6 +15,8 @@ function tempClose(reason) {
     // If there are a reason write it out
     if (reason) {
         reasoningText = document.createTextNode('På grund av ' + reason);
+        reasoning.style.top = 30 + "%";
+        reasoning.style.right = 3 + "%";
     };
     reasoning.appendChild(reasoningText);
     openingHoursSlide.appendChild(reasoning);
@@ -22,14 +26,18 @@ function tempClose(reason) {
 function getOpeningHoursHelper(data) {
     const openingHoursList = parseCsvString(data);
     // Checks if the cafeteria is temporarily closed
-    const isTempClose = openingHoursList[2][1];
+    const isTempClose = openingHoursList[6][1];
+    console.log(isTempClose);
     // Adds the opening hours to the website
-    const morningHours = document.getElementById("morningHours");
-    const afternoonHours = document.getElementById("afternoonHours");
-    morningHours.innerHTML = openingHoursList[0][1];
-    afternoonHours.innerHTML = openingHoursList[1][1];
+    const openingHoursMonToThu = document.getElementById("openingHoursMonToThu");
+    const lunchbreakHours = document.getElementById("lunchbreakHours");
+    const fridayHours = document.getElementById("fridayHours");
+    openingHoursMonToThu.innerHTML = openingHoursList[0][1];
+    fridayHours.innerHTML = openingHoursList[1][1];
+    lunchbreakHours.innerHTML = openingHoursList[3][1];
+    
     // If closed, run tempClose()
     if (isTempClose === "TRUE") {
-        tempClose(openingHoursList[3][1]);
+        tempClose(openingHoursList[7][1]);
     };
 }

@@ -29,19 +29,19 @@ function getImageSlide(){
         url: "http://127.0.0.1:8000/csv/" + imageListPath,
         success: function (data) {
             helperGetImageSlide(data);
-            getMenu();
+            // getMenu();
         }
     });
 }
 
 // Runs get menu with data from productList.csv
-function getMenu() {
-    $.ajax({
-        type: 'GET',
-        url: "http://127.0.0.1:8000/csv/" + productListPath,
-        success: function (data) { createMenuSlides(data) }
-    });
-}
+// function getMenu() {
+//     $.ajax({
+//         type: 'GET',
+//         url: "http://127.0.0.1:8000/csv/" + productListPath,
+//         success: function (data) { createMenuSlides(data) }
+//     });
+// }
 
 getOpeningHours();
 

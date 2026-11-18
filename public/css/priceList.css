@@ -21,15 +21,20 @@ body{
 .openHoursHead {
 	color: white;
 	text-align: center;
-	font-size: 130px;
-	font-family: 'Bebas Neue', cursive;;
+	font-size: 180px;
+	font-family: 'Bebas Neue', cursive;
+	position: absolute;
+	top: -10%;
+	right: 7%;
 }
 	
 .openHours {
 	color: white;
-	text-align: center;
-	font-size: 70px;
+	font-size: 85px;
+	width: 100%;
 	font-family: 'Bebas Neue', cursive;;
+	position: absolute;
+	top: 13%;
 }
 
 
@@ -106,8 +111,8 @@ body{
 
 .productImage{
 	z-index:1;
-	bottom:600px;
-	left: 50px;
+	bottom:660px;
+	left: 20px;
 	
 }
 
